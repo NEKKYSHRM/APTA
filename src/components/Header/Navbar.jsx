@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from "react-router-dom";
 import "./Navbar.css"
 import logo from "../../assets/aptaLogo.png"
 
 export default function Navbar() {
+  const [scrollPosition, setScrollPosition] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.scrollY;
+      setScrollPosition(currentPosition)
+    };
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <div className='navbar'>
-      <nav>
+      <nav className={scrollPosition > 100? 'nav-trp-bg' : 'nav-solid-bg'}>
         <div className="navLeft">
         <div className="logo">
             <img src={logo} alt="" />
@@ -20,10 +35,10 @@ export default function Navbar() {
                     <a href="#">About Us</a>
                 </li>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="#">Influencers</a>
                 </li>
                 <li>
-                    <a href="#">More</a>
+                    <a href="#">Brands</a>
                 </li>
             </ul>
         </div>

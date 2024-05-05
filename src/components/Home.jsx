@@ -10,8 +10,9 @@ import Hero1 from "../assets/Hero/Hero1.jpg";
 import Hero2 from "../assets/Hero/Hero2.jpg";
 
 export default function Home() {
+  
   return (
-    <div className="home-page">
+    <div className="home-page" >
       <section className="hero">
         <div className="hero-frame">
           <img src={Hero2} alt="" />

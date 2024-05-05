@@ -15,19 +15,26 @@
 .navbar {
     width: 100%;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     top: 0;
 }
 
 nav {
     /* background-color: var(--primary-color); */
-    background-color: #001f6600;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 0.7vw 3vw;
     position: relative;
+}
+
+.nav-solid-bg {
+    background-color: #001f6600;
+}
+
+.nav-trp-bg {
+    background-color: var(--primary-color);
 }
 
 .navLeft {
