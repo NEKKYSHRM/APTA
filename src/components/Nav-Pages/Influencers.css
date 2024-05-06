@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #050311;
+  --secondary-color: #001f66;
+  --tertiary-color: #035edd;
+  --fourth-color: #5ca8ff;
+  --fifth-color: #add7f6;
+}
+
+.influencers-page {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+}
+
+.influencers-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 1vw;
+}
+
+.inf-sec1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3vw 0 4vw 0;
+  font-size: 3vw;
+  width: 100%;
+}
+
+.inf-sec1 h1 {
+  color: white;
+  text-align: center;
+}
+
+.inf-gradient-bg {
+  background-image: linear-gradient(
+    to bottom,
+    #9d00ff,
+    #7b00ff,
+    #1e00ff10
+  ); /* Orange to Yellow to Green */
+}
+
+.inf-sec3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  width: 80vw;
+  gap: 4vw;
+  overflow-y: auto;
+}
+
+.inf-cards {
+  width: 20vw;
+  height: 28vw;
+  border-radius: 5%;
+  background-color: white;
+  padding: 1vw;
+}
+
+.inf-profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inf-card-pic {
+  margin-top: 1vw;
+  width: 8vw;
+  border: 0.3vw solid #ff2549;
+  border-radius: 50%;
+}
+
+.inf-profile-info h2 {
+  margin-top: 1vw;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: rgb(57, 57, 57);
+}
+
+.inf-profile-info span {
+  margin-top: 0.2vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.2vw;
+  color: rgb(135, 135, 135);
+}
+
+.inf-profile-info p {
+  margin-top: 0.2vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+  color: rgb(66, 66, 66);
+}
+
+.hire-me {
+  margin-top: 1vw;
+  background-image: linear-gradient(to bottom, #ee67d3, #ff038d, #ff2549);
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 1.1vw;
+  border: none;
+  padding: 0.5vw 1.5vw;
+  border-radius: 2vw;
+  cursor: pointer;
+}
+
+.hire-me:hover {
+  background-image: linear-gradient(to bottom, #9d00ff, #7b00ff, #1e00ff);
+}
+
+.inf-card-social-link {
+  margin-top: 1vw;
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+}
+
+.inf-card-social-link img {
+  width: 3vw;
+}
+
+.card-follower-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-follower-counter span {
+  margin-top: 0.2vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.8vw;
+  color: rgb(66, 66, 66);
+}
+
+.card-follower-counter p {
+  margin-top: 0.2vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.6vw;
+  color: rgb(142, 142, 142);
+}
+
+.scroll-container {
+      height: 60vw;
+      overflow-y: scroll;
+      scrollbar-width: thin; /* For Firefox */
+    }
+
+    /* Custom scrollbar track */
+    .scroll-container::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+
+    /* Custom scrollbar thumb */
+    .scroll-container::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 10px;
+      border: 3px solid #f1f1f1;
+    }
+
+    /* Custom scrollbar animation */
+    .scroll-container::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+
+    /* Custom scrollbar animation with transition */
+    .scroll-container::-webkit-scrollbar-thumb {
+      transition: background-color 0.3s ease-in-out;
+    }

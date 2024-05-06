@@ -1,53 +1,82 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./Navbar.css"
-import logo from "../../assets/aptaLogo.png"
+import "./Navbar.css";
+import logo from "../../assets/aptaLogo.png";
 
 export default function Navbar() {
-  const [scrollPosition, setScrollPosition] = useState(0)
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentPosition = window.scrollY;
-      setScrollPosition(currentPosition)
+      setScrollPosition(currentPosition);
     };
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className='navbar'>
-      <nav className={scrollPosition > 100? 'nav-trp-bg' : 'nav-solid-bg'}>
+    <div className="navbar">
+      <nav className={scrollPosition > 100 ? "nav-trp-bg" : "nav-solid-bg"}>
         <div className="navLeft">
-        <div className="logo">
+          <div className="logo">
             <img src={logo} alt="" />
-        </div>
-        <div className="navMenus">
+          </div>
+          <div className="navMenus">
             <ul>
-                <li>
-                    <a href="#">Discover</a>
-                </li>
-                <li>
-                    <a href="#">About Us</a>
-                </li>
-                <li>
-                    <a href="#">Influencers</a>
-                </li>
-                <li>
-                    <a href="#">Brands</a>
-                </li>
+              <li>
+                <NavLink
+                  to=""
+                  className={({ isActive }) =>
+                    `${isActive ? "nav-active" : "nav-notActive"}`
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    `${isActive ? "nav-active" : "nav-notActive"}`
+                  }
+                >
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/influencers"
+                  className={({ isActive }) =>
+                    `${isActive ? "nav-active" : "nav-notActive"}`
+                  }
+                >
+                  Influencers
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/brands"
+                  className={({ isActive }) =>
+                    `${isActive ? "nav-active" : "nav-notActive"}`
+                  }
+                >
+                  Brands
+                </NavLink>
+              </li>
             </ul>
-        </div>
+          </div>
         </div>
         <div className="sideButtons">
-            <button>Join</button>
-            <button>Login</button>
+          <button>Join</button>
+          <button>Login</button>
         </div>
       </nav>
+      <hr />
     </div>
-  )
+  );
 }

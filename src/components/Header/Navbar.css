@@ -14,7 +14,7 @@
 
 .navbar {
     width: 100%;
-    position: fixed;
+    position: sticky;
     z-index: 1000;
     top: 0;
 }
@@ -30,11 +30,18 @@ nav {
 }
 
 .nav-solid-bg {
-    background-color: #001f6600;
+    background-color: black;
 }
 
 .nav-trp-bg {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.nav-active {
+    color: orangered;
+}
+.nav-notActive {
+    color: white;
 }
 
 .navLeft {
@@ -61,7 +68,7 @@ nav {
 
 .navMenus a {
     text-decoration: none;
-    color: white;
+    /* color: white; */
 }
 
 .sideButtons {

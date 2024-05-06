@@ -121,7 +121,7 @@ export default function Home() {
         <div className="home-sec4-cta">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum quisquam in nisi expedita, repellendus aliquid.</p>
           <button>Sign Up</button>
-          <button>Sign Up</button>
+          <button>Login</button>
         </div>
       </section>
     </div>

@@ -78,7 +78,7 @@
 
 .home-sec4 {
   position: relative;
-  background-color: white;
+  background-color: var(--fifth-color);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -99,11 +99,25 @@
   width: 40vw;
 }
 
+.home-sec4-cta p {
+  font-weight: 900;
+  color: #484848f2;
+}
+
 .home-sec4-cta button {
+  background-image: linear-gradient(to bottom, #9d00ff, #7b00ff, #1e00ff);
+  border: none;
+  background-color: var(--fifth-color);
+  color: white;
+  border-radius: 2vw 3vw;
   font-size: 1vw;
   margin-right: 1vw;
-  padding: 0.5vw;
+  padding: 0.5vw 1vw;
   cursor: pointer;
+}
+
+.home-sec4-cta button:hover {
+  color: #add7f6;
 }
 
 @media (max-width: 768px) {
