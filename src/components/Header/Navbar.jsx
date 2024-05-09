@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink , Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/aptaLogo.png";
 
@@ -24,7 +24,9 @@ export default function Navbar() {
       <nav className={scrollPosition > 100 ? "nav-trp-bg" : "nav-solid-bg"}>
         <div className="navLeft">
           <div className="logo">
-            <img src={logo} alt="" />
+            <Link to="/">
+              <img src={logo} alt="Logo" />
+            </Link>
           </div>
           <div className="navMenus">
             <ul>

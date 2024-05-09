@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Home.css";
 import "./Utilities/card.css";
@@ -6,16 +6,29 @@ import diamond_svg from "../assets/svg/diamond-outline.svg";
 import compass_svg from "../assets/svg/compass-outline.svg";
 import people_svg from "../assets/svg/people-circle-outline.svg";
 import cube_svg from "../assets/svg/cube-sharp.svg";
-import Hero1 from "../assets/Hero/Hero1.jpg";
 import Hero2 from "../assets/Hero/Hero2.jpg";
+import Hero3 from "../assets/Hero/Hero3.jpg";
 
 export default function Home() {
+  const[hero, setHero] = useState(0)
+  const heroImages = [
+    Hero2,
+    Hero3
+  ]
+
+  useEffect(()=>{
+    const intervalId = setInterval(()=> {
+      setHero((preHero) => (preHero+1)%heroImages.length)
+    }, 3000);
+
+    return() => clearInterval(intervalId);
+  }, [heroImages.length])
   
   return (
     <div className="home-page" >
       <section className="hero">
         <div className="hero-frame">
-          <img src={Hero2} alt="" />
+          <img src={heroImages[hero]} alt={`Slide ${hero + 1}`} />
         </div>
         <div className="heroText">
           <span>
