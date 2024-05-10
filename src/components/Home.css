@@ -78,7 +78,7 @@
 
 .home-sec4 {
   position: relative;
-  background-color: var(--fifth-color);
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
