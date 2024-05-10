@@ -58,7 +58,7 @@ export default function footer() {
         <div className="copyright-sec">
             <hr />
             <div className="copyrightText">
-              <span>&copy; 2024 <b>APTA </b> All rights reserved</span>
+              <span>&copy; 2024 <b>APTA. </b> All rights reserved.</span>
               <p>Privacy Policy</p>
               <p>Terms of Services</p>
               <p>Cookie Settings</p>
